@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int matematik,fizik,muzik,kimya,turkce;
+        int matematik,fizik,muzik,tarih,kimya,turkce;
         int toplam=0;
         int sayac=0;
         Scanner scanner=new Scanner(System.in);
@@ -12,6 +12,8 @@ public class Main {
         fizik=scanner.nextInt() ;
         System.out.println("Muzik Notunu Giriniz :");
         muzik=scanner.nextInt();
+        System.out.println("Tarih Notunu Giriniz :");
+        tarih =scanner.nextInt();
         System.out.println("Kimya Notunu Giriniz :");
         kimya=scanner.nextInt();
         System.out.println("Turkce Notunu Giriniz :");
@@ -29,6 +31,10 @@ public class Main {
             toplam+=muzik;
             sayac++;
         }
+        if (tarih>=0&&tarih<=100){
+            toplam+=tarih;
+            sayac++;
+        }
         if (kimya>=0&&kimya<=100){
             toplam+=kimya;
             sayac++;
@@ -44,7 +50,4 @@ public class Main {
 
 
     }
-
-
-
 }
