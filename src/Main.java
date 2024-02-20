@@ -1,15 +1,50 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int matematik,fizik,muzik,kimya,turkce;
+        int toplam=0;
+        int sayac=0;
+        Scanner scanner=new Scanner(System.in);
+        System.out.println(" Matematik Notunu Giriniz :");
+        matematik=scanner.nextInt() ;
+        System.out.println("Fizik Notunu Giriniz :");
+        fizik=scanner.nextInt() ;
+        System.out.println("Muzik Notunu Giriniz :");
+        muzik=scanner.nextInt();
+        System.out.println("Kimya Notunu Giriniz :");
+        kimya=scanner.nextInt();
+        System.out.println("Turkce Notunu Giriniz :");
+        turkce=scanner.nextInt();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        if (matematik>=0&&matematik<=100){
+            toplam+=matematik;
+            sayac++;
         }
+        if (fizik>=0&&fizik<=100){
+            toplam+=fizik;
+            sayac++;
+        }
+        if (muzik>=0&&muzik<=100){
+            toplam+=muzik;
+            sayac++;
+        }
+        if (kimya>=0&&kimya<=100){
+            toplam+=kimya;
+            sayac++;
+        }
+        if (turkce>=0&&turkce<=100){
+            toplam+=turkce;
+            sayac++;}
+        if((toplam/sayac)>=60){
+            System.out.println("Sınıfı Geçti:"+(toplam/sayac));
+
+        }else System.out.println("Sınıfta Kaldı :"+(toplam/sayac));
+
+
+
     }
+
+
+
 }
